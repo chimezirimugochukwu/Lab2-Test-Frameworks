@@ -27,8 +27,8 @@ jobs:
       - name: Run Newman
         env:
           POSTMAN_API_URL: 'https://api.getpostman.com'
-          POSTMAN_API_KEY: ${{ secrets.POSTMAN_API_KEY }}
-          POSTMAN_COLLECTION_UID: ${{ secrets.POSTMAN_COLLECTION_UID }}
+          POSTMAN_API_KEY: ${{ PMAK-6382a2756edb964b6a188b5f-ced78c22150732cc9fb7892c0c9c9613c5 }}
+          POSTMAN_COLLECTION_UID: ${{ 23985296-d5c88ca8-82b2-44e5-847d-8f5921f887c6 }}
         run: |
           newman run "${{env.POSTMAN_API_URL}}/collections/${{env.POSTMAN_COLLECTION_UID}}?apikey=${{env.POSTMAN_API_KEY}}" \
           -r htmlextra,cli --reporter-htmlextra-export newman-results/htmlreport.html
